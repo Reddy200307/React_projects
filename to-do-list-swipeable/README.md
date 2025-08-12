@@ -6,7 +6,7 @@ A modern, responsive, and accessible **Todo** application built with **React**, 
 
 ---
 
-## Demo Screenshot
+## Screenshot
 
 ![TodoMatic Demo](./screenshot.png)  
 
@@ -145,5 +145,4 @@ src/
 * [Lottie](https://airbnb.io/lottie/)
 * [Dayjs](https://day.js.org/)
 
-```
 

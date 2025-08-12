@@ -1,69 +1,160 @@
-# React + TypeScript + Vite
+Sure! Here's a professional and detailed `README.md` for your React Todo app using MUI, Dayjs, Framer Motion, and Lottie:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# TodoMatic
 
-Currently, two official plugins are available:
+A modern, responsive, and accessible **Todo** application built with **React**, **Material-UI (MUI)**, **Dayjs**, **Framer Motion**, and **Lottie** animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Demo Screenshot
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![TodoMatic Demo](./screenshot.png)  
+*Replace with your actual screenshot file if available*
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Dark Mode Theme:** Beautiful custom dark theme with glassmorphic styling and smooth transitions.
+- **Add Tasks:** Enter task description with an optional due date using a date picker.
+- **Task List:** Displays tasks sorted by due date (tasks without dates appear last).
+- **Mark Completed:** Toggle task completion with a checkbox.
+- **Delete Tasks:** Remove unwanted tasks easily.
+- **Overdue Highlighting:** Tasks overdue and not completed are visually highlighted.
+- **Confetti Animation:** Celebrate task completion with a fun confetti animation using Lottie.
+- **Responsive Layout:** Mobile-first design that adapts elegantly to all screen sizes.
+- **Accessible:** Keyboard-friendly interactions and ARIA labels for screen readers.
+- **Smooth Animations:** Adding, toggling, and removing tasks feature subtle animations powered by Framer Motion.
+
+---
+
+## Tech Stack
+
+- **React** — Frontend library for building UI components
+- **Material-UI (MUI)** — UI component framework for React
+- **@mui/x-date-pickers** — DatePicker component with Dayjs adapter
+- **Dayjs** — Lightweight date utility library
+- **Framer Motion** — Declarative animations and gestures for React
+- **Lottie React** — Render animations exported as JSON from Adobe After Effects (via Lottie)
+- **TypeScript** — Type-safe JavaScript superset
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+ recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Reddy200307/React_projects/tree/main/to-do-list-swipeable
+cd to-do-list-swipeable
+````
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Start the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm start
+# or
+yarn start
 ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+
+---
+
+## Usage
+
+* Enter a task description in the input field.
+* (Optional) Select a due date using the date picker.
+* Click **Add** or press **Enter** (depending on device and focus) to add the task.
+* Click the checkbox to mark a task as completed; a confetti animation plays on completion.
+* Click the delete icon to remove a task.
+* Overdue tasks are highlighted in red; completed tasks appear with a strikethrough and muted color.
+
+---
+
+## Folder Structure
+
+```
+src/
+├── assets/
+│   ├── confetti.json         # Lottie animation file
+│   └── lottie.css            # Styles for Lottie container
+├── components/
+│   └── ToDo.tsx              # Main Todo component (your code)
+├── App.tsx                   # Root app file
+├── index.tsx                 # Entry point
+└── ...
+```
+
+---
+
+## Customization
+
+* **Theme:** Modify the `darkTheme` object to change colors, typography, or component styles.
+* **Animations:** Replace or customize the Lottie animation by swapping `confetti.json`.
+* **Persistence:** Add localStorage or backend integration to save tasks between sessions.
+* **Features:** Consider adding task editing, filtering, or drag-and-drop reordering.
+
+---
+
+## Accessibility
+
+* All interactive elements have appropriate ARIA labels.
+* Keyboard navigation is supported with focus management.
+* Color contrast meets WCAG guidelines for dark mode.
+
+---
+
+## Dependencies
+
+| Package             | Version |
+| ------------------- | ------- |
+| react               | ^18.x   |
+| @mui/material       | ^5.x    |
+| @mui/x-date-pickers | ^5.x    |
+| dayjs               | ^1.x    |
+| framer-motion       | ^7.x    |
+| lottie-react        | ^2.x    |
+| @mui/icons-material | ^5.x    |
+| typescript          | ^4.x    |
+
+---
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## Author
+
+Your Name - [Your GitHub](https://github.com/Reddy200307/)
+Feel free to reach out for feedback or contributions!
+
+---
+
+## Acknowledgements
+
+* [Material-UI](https://mui.com/)
+* [Framer Motion](https://www.framer.com/motion/)
+* [Lottie](https://airbnb.io/lottie/)
+* [Dayjs](https://day.js.org/)
+
+```
+

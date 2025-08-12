@@ -1,6 +1,5 @@
-Sure! Here's a professional and detailed `README.md` for your React Todo app using MUI, Dayjs, Framer Motion, and Lottie:
 
-````markdown
+
 # TodoMatic
 
 A modern, responsive, and accessible **Todo** application built with **React**, **Material-UI (MUI)**, **Dayjs**, **Framer Motion**, and **Lottie** animations.
@@ -10,7 +9,6 @@ A modern, responsive, and accessible **Todo** application built with **React**, 
 ## Demo Screenshot
 
 ![TodoMatic Demo](./screenshot.png)  
-*Replace with your actual screenshot file if available*
 
 ---
 
@@ -55,7 +53,7 @@ A modern, responsive, and accessible **Todo** application built with **React**, 
 ```bash
 git clone https://github.com/Reddy200307/React_projects/tree/main/to-do-list-swipeable
 cd to-do-list-swipeable
-````
+
 
 2. Install dependencies:
 
@@ -136,16 +134,7 @@ src/
 
 ---
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
-
-## Author
-
-Your Name - [Your GitHub](https://github.com/Reddy200307/)
-Feel free to reach out for feedback or contributions!
 
 ---
 

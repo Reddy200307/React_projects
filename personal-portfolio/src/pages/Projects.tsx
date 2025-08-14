@@ -58,11 +58,11 @@ const projects = [
     img: Samarpan2023,
   },
   {
-    title: 'Personal Expenses Calculator',
-    desc: 'A Simple App to calculate Personal or Any expenses.',
-    tech: ['React', 'Flask','Open Cv','Arduino'],
+    title: 'Smart home using IOT and web',
+    desc: 'A Web App based on react to control the smart home wirelessly ',
+    tech: ['React', 'Flask','Open Cv','Arduino','Python'],
     live: '',
-    github: 'https://github.com/Reddy200307/React_projects/tree/main/personal-expenses-calculator',
+    github: 'https://github.com/Reddy200307/React_projects/tree/main/smart_home',
     img: Smarthome,
   },
   {

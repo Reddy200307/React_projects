@@ -1,3 +1,4 @@
+/* index.css */
 @import "tailwindcss";
 
 #bg-video {
@@ -9,6 +10,7 @@
   object-fit: cover;
   z-index: -1;
   pointer-events: none; 
+  background-color: #000;
 }
 
 .content {

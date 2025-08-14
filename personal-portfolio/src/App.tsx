@@ -17,7 +17,7 @@ const theme = createTheme({
     fontFamily: 'Roboto, sans-serif',
   },
 });
-
+import "./firebase.js"
 const App: React.FC = () => {
   return (
 <div className="app-container">

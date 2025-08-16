@@ -21,17 +21,17 @@ type Slide = {
 };
 
 const DEFAULT_SLIDES: Slide[] = [
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img1.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img2.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img3.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img4.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img5.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img6.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img7.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img8.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img9.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img10.jpg?raw=true" },
-  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img11.jpg?raw=true" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img1.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img2.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img3.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img4.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img5.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img6.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img7.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img8.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img9.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img10.jpg" },
+  { src: "https://raw.githubusercontent.com/Reddy200307/React_projects/refs/heads/main/personal-portfolio/src/assets/images/img11.jpg" },
 ];
 
 const variants = {

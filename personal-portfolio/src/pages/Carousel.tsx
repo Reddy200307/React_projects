@@ -8,6 +8,7 @@ import {
   useMediaQuery,
   Typography,
   Dialog,
+  CircularProgress,
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -19,30 +20,18 @@ type Slide = {
   src: string;
 };
 
-import img1 from "../assets/images/img1.jpg";
-import img2 from "../assets/images/img2.jpg";
-import img3 from "../assets/images/img3.jpg";
-import img4 from "../assets/images/img4.jpg";
-import img5 from "../assets/images/img5.jpg";
-import img6 from "../assets/images/img6.jpg";
-import img7 from "../assets/images/img7.jpg";
-import img8 from "../assets/images/img8.jpg";
-import img9 from "../assets/images/img9.jpg";
-import img10 from "../assets/images/img10.jpg";
-import img11 from "../assets/images/img11.jpg";
-
 const DEFAULT_SLIDES: Slide[] = [
-  { src: img1 },
-  { src: img2 },
-  { src: img3 },
-  { src: img4 },
-  { src: img5 },
-  { src: img6 },
-  { src: img7 },
-  { src: img8 },
-  { src: img9 },
-  { src: img10 },
-  { src: img11 },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img1.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img2.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img3.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img4.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img5.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img6.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img7.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img8.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img9.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img10.jpg?raw=true" },
+  { src: "https://github.com/Reddy200307/React_projects/blob/main/personal-portfolio/src/assets/images/img11.jpg?raw=true" },
 ];
 
 const variants = {
@@ -58,6 +47,48 @@ const variants = {
     scale: 0.98,
   }),
 };
+
+// Reusable image component with spinner
+function ImageWithLoader({
+  src,
+  alt,
+  style,
+  onClick,
+}: {
+  src: string;
+  alt: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}) {
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <Box
+      sx={{
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {loading && <CircularProgress size={48} sx={{ position: "absolute", zIndex: 2 }} />}
+      <motion.img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoading(false)}
+        style={{
+          ...style,
+          opacity: loading ? 0 : 1,
+          transition: "opacity 0.5s ease-in-out",
+        }}
+        onClick={onClick}
+      />
+    </Box>
+  );
+}
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);
@@ -123,6 +154,7 @@ export default function Carousel() {
             borderRadius: 6,
             overflow: "hidden",
             p: { xs: 1.5, sm: 2 },
+             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             border: "1px solid rgba(255, 255, 255, 0.4)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
@@ -158,28 +190,36 @@ export default function Carousel() {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <AnimatePresence custom={direction} initial={false}>
-              <motion.img
-                key={DEFAULT_SLIDES[index].src}
-                src={DEFAULT_SLIDES[index].src}
-                alt={`Slide ${index + 1}`}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: 10,
-                  cursor: "pointer",
-                }}
-                onClick={() => setFullscreen(true)}
-              />
-            </AnimatePresence>
+           <AnimatePresence custom={direction} initial={false}>
+  <motion.div
+    key={DEFAULT_SLIDES[index].src}
+    custom={direction}
+    variants={variants}
+    initial="enter"
+    animate="center"
+    exit="exit"
+    transition={{ duration: 0.6, ease: "easeInOut" }}
+    style={{
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+    }}
+  >
+    <ImageWithLoader
+      src={DEFAULT_SLIDES[index].src}
+      alt={`Slide ${index + 1}`}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        borderRadius: 10,
+        cursor: "pointer",
+      }}
+      onClick={() => setFullscreen(true)}
+    />
+  </motion.div>
+</AnimatePresence>
+
 
             <IconButton
               onClick={() => slideTo(index - 1, -1)}
@@ -256,11 +296,7 @@ export default function Carousel() {
       </Box>
 
       {/* Fullscreen Dialog */}
-      <Dialog
-        open={fullscreen}
-        onClose={() => setFullscreen(false)}
-        fullScreen
-      >
+      <Dialog open={fullscreen} onClose={() => setFullscreen(false)} fullScreen>
         <Box
           sx={{
             position: "relative",
@@ -268,13 +304,10 @@ export default function Carousel() {
             height: "100%",
           }}
         >
-          <motion.img
+          <ImageWithLoader
             key={DEFAULT_SLIDES[index].src}
             src={DEFAULT_SLIDES[index].src}
             alt={`Fullscreen Slide ${index + 1}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             style={{
               width: "100%",
               height: "100%",

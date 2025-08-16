@@ -17,6 +17,7 @@ import {
 import { TbBrandJavascript,TbBrandCpp } from "react-icons/tb";
 import { SiTypescript } from 'react-icons/si';
 import SocialLinks from './SocialLinks';
+import Carousel from './Carousel';
 // import TimelineSection from './timeline';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaC } from "react-icons/fa6";
@@ -208,6 +209,7 @@ const HomePage: React.FC = () => {
 
         </Container>
       <ProjectsSection/>
+      <Carousel/>
       </StyledSection>
 
         {/* <TimelineSection/> */}

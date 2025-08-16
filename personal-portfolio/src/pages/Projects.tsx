@@ -61,7 +61,7 @@ const projects = [
     title: 'Smart home using IOT and web',
     desc: 'A Web App based on react to control the smart home wirelessly ',
     tech: ['React', 'Flask','Open Cv','Arduino','Python'],
-    live: '',
+    live: 'null',
     github: 'https://github.com/Reddy200307/React_projects/tree/main/smart_home',
     img: Smarthome,
   },
@@ -93,7 +93,7 @@ export default function ProjectsSection() {
         fontWeight="bold"
         gutterBottom
         color="white"
-        sx={{ textAlign: 'center', mb: { xs: 4, sm: 6 } }}
+        sx={{ textAlign: 'center', mt: { xs: 4, sm: 6 } }}
       >
         Projects
       </Typography>

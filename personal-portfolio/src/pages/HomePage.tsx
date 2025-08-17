@@ -18,10 +18,12 @@ import { TbBrandJavascript,TbBrandCpp } from "react-icons/tb";
 import { SiTypescript } from 'react-icons/si';
 import SocialLinks from './SocialLinks';
 import Carousel from './Carousel';
-// import TimelineSection from './timeline';
+import TimelineSection from './timeline';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaC } from "react-icons/fa6";
 import Prashu from "../assets/prashu.jpg";
+// import FeedBackForm from './FeedBackSection';
+import BottomBar from './Bottombar';
 const skills = [
   { name: 'React', icon: <FaReact /> },
   { name: 'HTML', icon: <FaHtml5 /> },
@@ -209,10 +211,12 @@ const HomePage: React.FC = () => {
 
         </Container>
       <ProjectsSection/>
+        <TimelineSection/>
       <Carousel/>
       </StyledSection>
 
-        {/* <TimelineSection/> */}
+        {/* <FeedBackForm/> */}
+        <BottomBar/>
      
     </Box>
      </ThemeProvider>

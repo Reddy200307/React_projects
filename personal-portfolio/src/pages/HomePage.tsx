@@ -22,7 +22,7 @@ import TimelineSection from './timeline';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaC } from "react-icons/fa6";
 import Prashu from "../assets/prashu.jpg";
-import FeedBackForm from './FeedBackSection';
+// import FeedBackForm from './FeedBackSection';
 import BottomBar from './Bottombar';
 const skills = [
   { name: 'React', icon: <FaReact /> },
@@ -215,7 +215,7 @@ const HomePage: React.FC = () => {
       <Carousel/>
       </StyledSection>
 
-        <FeedBackForm/>
+        {/* <FeedBackForm/> */}
         <BottomBar/>
      
     </Box>
